@@ -3,10 +3,12 @@ install:
 				pip install -r requirements.txt
 
 test: 
-		python -m pytest -vvv -ra --cov=hello --cov=greeting --cov=smath tests
+		python -m pytest -vvv -ra --cov=hello --cov=greeting --cov=smath --cov=web tests
 
-notebook_test:
-		python -m pytest --nbval notebook.ipynb
+test_web: 
+		python -m pytest -v tests/test_web.py # if you just want to test web
+test_nb:
+		python -m pytest --nbval notebook.ipynb # if you just want to test notebook
 debug: 
 		python -m pytest -vv --pdb #Debugger is invoked
 
