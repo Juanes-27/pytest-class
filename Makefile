@@ -9,6 +9,8 @@ test:
 debug: 
 		python -m pytest -vv --pdb #Debugger is invoked
 
+onetest:
+		python -m pytest -vv tests/test_greeting.py::test_my_name4
 debugthree: 
 		#not working as expected
 		python -m pytest -vv --pdb --maxfail=4
