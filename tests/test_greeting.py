@@ -1,13 +1,17 @@
 from greeting import my_name
+import pytest
 
-def test_my_name():
-    assert "My name is: Juanes" == my_name("Juanes")
-    
-def test_my_name2():
-    assert "My name is: Juanes" == my_name("Juanes")
+@pytest.fixture
+def juanes():
+    return "My name is: Juanes"
 
-def test_my_name3():
-    assert "My name is: Juanes" == my_name("Juanes")
+@pytest.fixture
+def ari():
+    return "My name is: Ari"
+
+def test_juanes(juanes):
+    assert juanes == my_name("Juanes")
     
-def test_my_name4():
-    assert "My name is: Juanes" == my_name("Juanes")
+
+def test_ari(ari):
+    assert ari == my_name("Ari")
