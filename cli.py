@@ -1,7 +1,6 @@
-#!/usr/bin/env
+#!/usr/bin/env python
 import click
 from mlib.mchange import change
-
 
 @click.command()
 @click.option(
@@ -21,3 +20,4 @@ def make_change(amount):
 if __name__ == "__main__":
     # pylint: disable=no-value-for-parameter
     make_change()
+    
