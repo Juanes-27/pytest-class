@@ -12,6 +12,5 @@ def ari():
 def test_juanes(juanes):
     assert juanes == my_name("Juanes")
     
-
 def test_ari(ari):
     assert ari == my_name("Ari")

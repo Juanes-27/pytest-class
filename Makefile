@@ -3,9 +3,10 @@ install:
 				pip install -r requirements.txt
 
 test: 
-		python -m pytest -vv -ra --cov=hello --cov=greeting tests
-		python -m pytest --nbval notebook.ipynb
+		python -m pytest -vvv -ra --cov=hello --cov=greeting --cov=smath tests
 
+notebook_test:
+		python -m pytest --nbval notebook.ipynb
 debug: 
 		python -m pytest -vv --pdb #Debugger is invoked
 
