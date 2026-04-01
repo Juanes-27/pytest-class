@@ -6,6 +6,13 @@ test:
 		python -m pytest -vv --cov=hello --cov=greeting tests
 		python -m pytest --nbval notebook.ipynb
 
+debug: 
+		python -m pytest -vv --pdb #Debugger is invoked
+
+debugthree: 
+		#not working as expected
+		python -m pytest -vv --pdb --maxfail=4
+
 format: 
 		black *.py
 
