@@ -3,7 +3,8 @@ install:
 				pip install -r requirements.txt
 
 test: 
-		python -m pytest -vvv -ra --cov=hello --cov=greeting --cov=smath --cov=web tests
+		python -m pytest -vvv -ra --cov=hello --cov=greeting \
+		--cov=smath --cov=web --cov=cli tests
 
 test_web: 
 		python -m pytest -v tests/test_web.py # if you just want to test web
